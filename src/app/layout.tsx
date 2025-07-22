@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TripProvider } from '../context/TripContext';
+import { EventoProvider } from '../context/EventoContext';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body>
         <TripProvider>
-        {children}
+          <EventoProvider>
+            {children}
+          </EventoProvider>
         </TripProvider>
       </body>
     </html>
