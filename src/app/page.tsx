@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import EventosDashboard from "./eventos/page";
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "./dashboard/page";
 import "./ui.css";
 
 export default function Home() {

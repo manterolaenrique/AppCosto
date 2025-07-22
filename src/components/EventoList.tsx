@@ -19,7 +19,7 @@ const EventoList: React.FC<EventoListProps> = ({ eventos, onEditar, children }) 
   const [modalEliminarAbierto, setModalEliminarAbierto] = useState(false);
   const [eventoAEliminar, setEventoAEliminar] = useState<Evento | null>(null);
 
-  const handleAgregarGasto = (evento: Evento) => {
+  const handleAgregarGasto = () => {
     setModalGastoAbierto(true);
   };
 
@@ -57,7 +57,7 @@ const EventoList: React.FC<EventoListProps> = ({ eventos, onEditar, children }) 
               <EventoCard
                 evento={evento}
                 onVerDetalles={() => handleVerDetalles(evento)}
-                onAgregarGasto={() => handleAgregarGasto(evento)}
+                onAgregarGasto={() => handleAgregarGasto()}
                 onEditar={() => onEditar && onEditar(evento)}
                 onEliminar={() => handleEliminarEvento(evento)}
               />

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from 'react';
-import { useTripContext } from '../context/TripContext';
-import TripList from '../components/TripList';
-import TripModal from '../components/TripModal';
-import { Viaje } from '../context/TripContext';
-import '../app/ui.css';
+import { useTripContext } from '../../context/TripContext';
+import TripList from '../../components/TripList';
+import TripModal from '../../components/TripModal';
+import { Viaje } from '../../context/TripContext';
+import '../ui.css';
 
 const Dashboard: React.FC = () => {
   const { state, dispatch } = useTripContext();
