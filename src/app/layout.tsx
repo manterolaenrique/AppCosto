@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { TripProvider } from '../context/TripContext';
 import { EventoProvider } from '../context/EventoContext';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: "Costeador de Eventos y Viajes",
@@ -14,10 +15,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <TripProvider>
           <EventoProvider>
-            {children}
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
           </EventoProvider>
         </TripProvider>
       </body>

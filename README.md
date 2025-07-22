@@ -7,7 +7,7 @@
 ## 🚀 Demo en Vivo
 ¡Prueba la aplicación tú mismo!
 
-[Demo](https://github.com/manterolaenrique/AppCosto) <!-- Cambia este enlace por el de tu deploy si tienes uno -->
+[Demo](https://app-costo-hotg.vercel.app/) 
 
 ---
 
