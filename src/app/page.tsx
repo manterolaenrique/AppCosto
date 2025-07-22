@@ -9,7 +9,8 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-app flex flex-col items-center py-10 px-4 font-fun">
       <h1 className="title-main mb-8">
         <span className="inline-block animate-bounce">🍽️</span>
-        Costeador de Cenas y Viajes
+        Costeador de Eventos y Viajes
+        <span className="inline-block animate-bounce">✈️</span>
       </h1>
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl justify-center">
         {/* Tarjeta Costeador de Eventos */}

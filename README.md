@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✈️🍽️ Costeador de Eventos y Viajes
 
-## Getting Started
+¡Bienvenido a Costeador de Eventos y Viajes! Una aplicación web interactiva para organizar, dividir y visualizar gastos de eventos (cenas, reuniones, cumpleaños, etc.) y viajes grupales de manera sencilla y visual.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Demo en Vivo
+¡Prueba la aplicación tú mismo!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Demo](https://github.com/manterolaenrique/AppCosto) <!-- Cambia este enlace por el de tu deploy si tienes uno -->
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Vistazo Rápido
+Aquí tienes algunas capturas de pantalla de la aplicación en acción:
 
-## Learn More
+### 🏠 Dashboard Principal
+![Dashboard Principal](./images/dashboard.png)
 
-To learn more about Next.js, take a look at the following resources:
+### 🍽️ Costeador de Eventos
+![Crear Evento](./images/crear-evento.png)
+![Detalles de Evento](./images/detalles-evento.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✈️ Costeador de Viajes
+![Crear Viaje](./images/crear-viaje.png)
+![Detalles de Viaje](./images/detalles-viaje.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💡 Características Principales
+- **Costeador de Eventos:**
+  - Flujo multi-step para crear eventos y dividir gastos.
+  - Agrega participantes, define quién pagó y cuánto, y calcula automáticamente los saldos.
+  - Edición rápida de nombre y fecha desde el dashboard.
+  - Visualización clara de quién debe pagar o recibir dinero.
+- **Costeador de Viajes:**
+  - Registro de viajes y participantes.
+  - Agrega gastos individuales y visualiza el balance de cada integrante.
+  - Detalle de saldos y totales por viaje.
+- **UX Moderna:**
+  - Interfaz clara, responsiva y amigable.
+  - Modales y formularios validados.
+  - Mensajes visuales cuando no hay datos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tecnologías Utilizadas
+- React (Next.js App Router)
+- TypeScript
+- CSS personalizado
+- Context API y hooks
+
+---
+
+## 🏗️ Instalación y Uso
+Sigue estos sencillos pasos para tener la aplicación funcionando localmente:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/manterolaenrique/AppCosto.git
+   ```
+
+2. Navega al directorio del proyecto:
+
+   ```bash
+   cd AppCosto
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   # o si usas yarn
+   # yarn install
+   ```
+
+4. Ejecuta la aplicación en modo desarrollo:
+
+   ```bash
+   npm run dev
+   # o si usas yarn
+   # yarn dev
+   ```
+
+La aplicación debería abrirse en tu navegador en [http://localhost:3000](http://localhost:3000).
+
+---
+
+¡Disfruta organizando tus eventos y viajes sin enredos de cuentas! ✨
