@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { useTripContext } from '../context/TripContext';
 import TripList from '../components/TripList';

@@ -15,12 +15,11 @@ const EventoList: React.FC<EventoListProps> = ({ eventos, onEditar, children }) 
   const { dispatch } = useEventoContext();
   const router = useRouter();
   const [modalGastoAbierto, setModalGastoAbierto] = useState(false);
-  const [eventoSeleccionado, setEventoSeleccionado] = useState<Evento | null>(null);
+
   const [modalEliminarAbierto, setModalEliminarAbierto] = useState(false);
   const [eventoAEliminar, setEventoAEliminar] = useState<Evento | null>(null);
 
   const handleAgregarGasto = (evento: Evento) => {
-    setEventoSeleccionado(evento);
     setModalGastoAbierto(true);
   };
 
