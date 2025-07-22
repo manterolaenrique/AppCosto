@@ -18,9 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex flex-col min-h-screen">
         <TripProvider>
           <EventoProvider>
-            <main className="flex-1">
-              {children}
-            </main>
+            {children}
             <Footer />
           </EventoProvider>
         </TripProvider>

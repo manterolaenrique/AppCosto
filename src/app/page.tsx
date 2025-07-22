@@ -6,8 +6,8 @@ import "./ui.css";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-app flex flex-col items-center py-10 px-4 font-fun">
-      <h1 className="title-main mb-8">
+    <main className="bg-gradient-app flex flex-col items-center py-8 px-4 font-fun flex-1">
+      <h1 className="title-main mb-6">
         <span className="inline-block animate-bounce">🍽️</span>
         Costeador de Eventos y Viajes
         <span className="inline-block animate-bounce">✈️</span>
