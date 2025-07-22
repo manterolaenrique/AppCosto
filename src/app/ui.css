@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #059669;
+  --success-hover: #047857;
+  --card-bg: #ffffffcc;
+  --card-shadow: 0 4px 24px 0 #0001;
+}
+
+.font-fun {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+.bg-gradient-app {
+  background: linear-gradient(135deg, #bfdbfe 0%, #bbf7d0 60%, #fef9c3 100%);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.title-main {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-shadow: 0 2px 8px #0001;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  font-size: 1.125rem;
+}
+.btn-success {
+  background: var(--success);
+  color: #fff;
+}
+.btn-success:hover {
+  background: var(--success-hover);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.18);
+}
+.modal-content {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 #0002;
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+  position: relative;
+  animation: fade-in 0.2s;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #94a3b8;
+  font-size: 2rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.modal-close:hover {
+  color: #ef4444;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  color: #111;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  margin-top: 0.25rem;
+}
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #2563eb22;
+}
+
+.label {
+  display: block;
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.text-muted {
+  color: #94a3b8;
+  font-style: italic;
+  text-align: center;
+}
+
+.text-danger {
+  color: #ef4444;
+}
+
+.btn-emerald, .btn-blue {
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.btn-emerald {
+  background: #059669;
+  color: #fff;
+}
+.btn-emerald:hover {
+  background: #047857;
+}
+.btn-blue {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-blue:hover {
+  background: #1d4ed8;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+/* Mejorar checkbox cuadrado */
+.checkbox-square {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.375rem;
+  border: 2px solid #2563eb;
+  background: #fff;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  position: relative;
+}
+.checkbox-square:checked {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+.checkbox-square:checked::after {
+  content: "";
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #fff;
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.section {
+  width: 100%;
+  max-width: 32rem;
+  background: #ffffffcc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #0001;
+  padding: 1.5rem;
+}
+
+.title-section {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.title-column {
+  color: #2563eb;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-title, .modal-content, .member-label, .total-label, .label, .pay-label, .total-label, .buyer-badge, .btn, .btn-block, .btn-emerald, .btn-blue, .btn-gray, .btn-danger {
+  color: #111 !important;
+}
+
+.text-black {
+  color: #111 !important;
+} 
