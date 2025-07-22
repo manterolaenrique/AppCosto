@@ -11,7 +11,7 @@ const PasoDatosBasicosEvento: React.FC = () => {
 
   useEffect(() => {
     dispatch({ type: 'ACTUALIZAR_EVENTO_EN_CREACION', payload: { nombreDelEvento: nombre, fechaDelEvento: fecha, participantes: Array.from({ length: cantidad }, (_, i) => ({ id: `${i}`, nombre: `Integrante ${i + 1}`, gastos: [] })) } });
-  }, [nombre, fecha, cantidad]);
+  }, [nombre, fecha, cantidad, dispatch]);
 
   useEffect(() => {
     setError('');

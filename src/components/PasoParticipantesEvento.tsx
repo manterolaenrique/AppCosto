@@ -12,7 +12,7 @@ const PasoParticipantesEvento: React.FC = () => {
       participantes: nombres.map((nombre, i) => ({ id: `${i}`, nombre, gastos: [] })),
       compradorId
     }});
-  }, [nombres, compradorId]);
+  }, [nombres, compradorId, dispatch]);
 
   if (!evento.participantes) return null;
 

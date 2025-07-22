@@ -13,7 +13,7 @@ const PasoDividirGastosEvento: React.FC = () => {
 
   useEffect(() => {
     dispatch({ type: 'ACTUALIZAR_EVENTO_EN_CREACION', payload: { montoTotal, montosIndividuales: montos } });
-  }, [montoTotal, montos]);
+  }, [montoTotal, montos, dispatch]);
 
   const perPerson = participantes.length > 0 ? montoTotal / participantes.length : 0;
   const saldos = montos.map(m => perPerson - m);

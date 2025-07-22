@@ -34,12 +34,12 @@ const EventoDetallePage: React.FC = () => {
   const saldos = montos.map(m => perPerson - m);
   const comprador = participantes.find(p => p.id === evento.compradorId);
 
-  const handleEditar = () => {
-    dispatch({ type: 'ACTUALIZAR_EVENTO_EN_CREACION', payload: { ...evento, id: evento.id } });
-    dispatch({ type: 'RETROCEDER_PASO_CREACION' }); // Asegura que el paso sea 0
-    dispatch({ type: 'RETROCEDER_PASO_CREACION' }); // Por si acaso
-    setModoEdicion(true);
-  };
+  // const handleEditar = () => {
+  //   dispatch({ type: 'ACTUALIZAR_EVENTO_EN_CREACION', payload: { ...evento, id: evento.id } });
+  //   dispatch({ type: 'RETROCEDER_PASO_CREACION' }); // Asegura que el paso sea 0
+  //   dispatch({ type: 'RETROCEDER_PASO_CREACION' }); // Por si acaso
+  //   setModoEdicion(true);
+  // };
 
   const handleEliminar = () => {
     setModalEliminarAbierto(true);

@@ -3,11 +3,9 @@ import React from 'react';
 interface AddExpenseEventoModalProps {
   abierto: boolean;
   onClose: () => void;
-  participantes: { id: string; nombre: string }[];
-  onGuardar?: (gasto: any) => void;
 }
 
-const AddExpenseEventoModal: React.FC<AddExpenseEventoModalProps> = ({ abierto, onClose, participantes, onGuardar }) => {
+const AddExpenseEventoModal: React.FC<AddExpenseEventoModalProps> = ({ abierto, onClose }) => {
   if (!abierto) return null;
   return (
     <div className="modal">

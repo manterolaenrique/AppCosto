@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function CostosCenaPage() {
-  const [dinner, setDinner] = useState<any>(null);
+  const [dinner, setDinner] = useState<{ title: string; date: string } | null>(null);
   const [members, setMembers] = useState<string[]>([]);
-  const [cost, setCost] = useState("");
   const [expenses, setExpenses] = useState<string[]>([]);
   const [error, setError] = useState("");
   const [saved, setSaved] = useState(false);
@@ -36,8 +35,6 @@ export default function CostosCenaPage() {
   const totalExpenses = expenses.reduce((acc, curr) => acc + (parseFloat(curr) || 0), 0);
   const totalCost = totalExpenses;
   const perPerson = members.length > 0 ? totalCost / members.length : 0;
-
-  const saldoPendiente = totalCost - totalExpenses;
 
   const getToPay = (idx: number) => {
     const gasto = parseFloat(expenses[idx]) || 0;
@@ -74,9 +71,9 @@ export default function CostosCenaPage() {
       <div className="w-full max-w-xl bg-white/90 rounded-2xl shadow-2xl p-8">
         <h1 className="text-3xl font-bold text-blue-700 mb-4 text-center flex items-center justify-center gap-2">
           <span className="inline-block animate-bounce">🍽️</span>
-          {dinner.title}
+          {dinner?.title}
         </h1>
-        {dinner.date && (
+        {dinner?.date && (
           <div className="text-center text-gray-500 mb-6">Fecha: {dinner.date}</div>
         )}
         <div className="mb-6">

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Plus, X } from "lucide-react";
+import { X } from "lucide-react";
 import "../ui.css";
 
 interface DinnerData {
@@ -13,7 +13,7 @@ interface DinnerData {
 export default function CrearCenaPage() {
   const [dinner, setDinner] = useState<DinnerData | null>(null);
   const [members, setMembers] = useState<string[]>([]);
-  const [saved, setSaved] = useState(false);
+
   const [showSavedOnBack, setShowSavedOnBack] = useState(false);
   const [buyerIdx, setBuyerIdx] = useState<number | null>(null);
   const router = useRouter();
@@ -40,8 +40,7 @@ export default function CrearCenaPage() {
   const handleSaveMembers = () => {
     // Aquí podrías guardar en localStorage, backend, etc.
     sessionStorage.setItem("dinnerMembers", JSON.stringify(members));
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    sessionStorage.setItem("dinnerBuyerIdx", buyerIdx?.toString() || "");
   };
 
   const handleBuyerChange = (idx: number) => {
