@@ -40,19 +40,7 @@ const EventoList: React.FC<EventoListProps> = ({ eventos, onEditar, children }) 
     setEventoAEliminar(null);
   };
 
-  const handleGuardarGasto = (gasto: { motivo: string; monto: number; participanteId: string; fotoComprobante?: string }) => {
-    if (eventoSeleccionado) {
-      dispatch({
-        type: 'AGREGAR_GASTO_EVENTO',
-        payload: {
-          eventoId: eventoSeleccionado.id,
-          gasto: { ...gasto },
-        },
-      });
-    }
-    setModalGastoAbierto(false);
-    setEventoSeleccionado(null);
-  };
+
 
   const handleVerDetalles = (evento: Evento) => {
     router.push(`/eventos/${evento.id}`);
@@ -82,8 +70,6 @@ const EventoList: React.FC<EventoListProps> = ({ eventos, onEditar, children }) 
       <AddExpenseEventoModal
         abierto={modalGastoAbierto}
         onClose={() => setModalGastoAbierto(false)}
-        participantes={eventoSeleccionado ? eventoSeleccionado.participantes.map(p => ({ id: p.id, nombre: p.nombre })) : []}
-        onGuardar={handleGuardarGasto}
       />
       {/* Modal de confirmación de eliminación */}
       {modalEliminarAbierto && (

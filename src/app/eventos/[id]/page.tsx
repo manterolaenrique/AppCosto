@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useEventoContext } from '../../../context/EventoContext';
-import CrearEventoWizard from '../../../components/CrearEventoWizard';
+// import CrearEventoWizard from '../../../components/CrearEventoWizard';
 import '../../ui.css';
 
 const EventoDetallePage: React.FC = () => {
