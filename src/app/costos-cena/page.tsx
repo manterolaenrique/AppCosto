@@ -44,6 +44,8 @@ export default function CostosCenaPage() {
   };
 
   const handleSave = () => {
+    if (!dinner) return;
+    
     setError("");
     // Guardar la cena en localStorage
     const cena = {

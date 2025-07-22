@@ -11,7 +11,6 @@ const EventoDetallePage: React.FC = () => {
   const { state, dispatch } = useEventoContext();
   const evento = params?.id ? state.eventos.find(e => e.id === params.id) : undefined;
   const [modalEliminarAbierto, setModalEliminarAbierto] = useState(false);
-  const [modoEdicion, setModoEdicion] = useState(false);
 
   if (!evento) {
     return (
@@ -103,8 +102,8 @@ const EventoDetallePage: React.FC = () => {
           </div>
         </div>
       )}
-      {/* Wizard de edición */}
-      {modoEdicion && <CrearEventoWizard />}
+      {/* Wizard de edición - Comentado temporalmente */}
+      {/* {modoEdicion && <CrearEventoWizard />} */}
     </div>
   );
 };

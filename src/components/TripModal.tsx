@@ -23,11 +23,14 @@ const TripModal: React.FC<TripModalProps> = ({ abierto, onClose, modo, viaje, on
 
   // Actualizar nombres de integrantes al cambiar cantidad
   React.useEffect(() => {
-    if (cantidad > nombresIntegrantes.length) {
-      setNombresIntegrantes(prev => [...prev, ...Array(cantidad - prev.length).fill('')]);
-    } else if (cantidad < nombresIntegrantes.length) {
-      setNombresIntegrantes(prev => prev.slice(0, cantidad));
-    }
+    setNombresIntegrantes(prev => {
+      if (cantidad > prev.length) {
+        return [...prev, ...Array(cantidad - prev.length).fill('')];
+      } else if (cantidad < prev.length) {
+        return prev.slice(0, cantidad);
+      }
+      return prev;
+    });
   }, [cantidad]);
 
   const handleNombreIntegrante = (idx: number, value: string) => {
