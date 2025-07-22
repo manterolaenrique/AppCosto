@@ -19,11 +19,9 @@ Aquí tienes algunas capturas de pantalla de la aplicación en acción:
 
 ### 🍽️ Costeador de Eventos
 ![Crear Evento](./images/crear-evento.png)
-![Detalles de Evento](./images/detalles-evento.png)
 
 ### ✈️ Costeador de Viajes
 ![Crear Viaje](./images/crear-viaje.png)
-![Detalles de Viaje](./images/detalles-viaje.png)
 
 ---
 
